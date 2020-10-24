@@ -6,11 +6,38 @@ body {
   --primary-red: #EB3013;
 }
 
-html,body {
+html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222
+}
+
+header {
+  height: 92vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  background-color: #fff;
+  background-image: url('./img/Illustration-girl-purple.png');
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.header-box {
+  margin-left: 5%;
+  text-transform: uppercase;
+}
+
+.header-box h1 {
+  letter-spacing: 0.5;
+  margin-bottom: 15px;
+}
+
+.header-box h3 {
+  text-shadow: 1px 1px 10px var(--primary-purple);
+  margin-bottom: 15px;
 }
 
 .navbar {
@@ -31,30 +58,6 @@ html,body {
 
 .nav-link {
   font-size: 1.1em !important
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: 100%
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.carousel-caption h1{
-  font-size: 500%;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 10px #000;
-}
-
-.carousel-caption h3 {
-  font-size: 200%;
-  font-weight: 500;
-  text-shadow: 1px 1px 1opx #000;
-  padding-bottom: 1rem;
 }
 
 .btn-primary {
@@ -160,30 +163,20 @@ footer h5 {
   }
 
   }
-@media (max-width: 768px) {
 
+@media (max-width: 1200px) {
+  header {
+    grid-template-columns: 1fr;
+    background-size: 400px;
+    background-position: bottom;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
   .navbar-brand {
     width: 25%;
   }
-
-.carousel-caption {
-  top: 45%;
-}
-
-.carousel-caption h1{
-  font-size: 350%;
-}
-
-.carousel-caption h3 {
-  font-size: 140%;
-  font-weight: 400;
-  padding-bottom: .2rem;
-}
-
-.carousel-caption .btn {
-  font-size: 95%;
-  padding: 8px 14px;
-}
 
 .display-4 {
   font-size: 200%;
@@ -197,26 +190,7 @@ footer h5 {
 }
 
 @media (max-width: 576px) {
-  .carousel-caption {
-    top: 40%;
-  }
   
-  .carousel-caption h1{
-    font-size: 250%;
-  }
-  
-  .carousel-caption h3 {
-    font-size: 110%;
-  }
-  
-  .carousel-caption .btn {
-    font-size: 90%;
-    padding: 4px 8px;
-  }
-
-  .carousel-indicators {
-    display: none;
-  }
   .display-4 {
     font-size: 160%;
   }
@@ -228,43 +202,6 @@ footer h5 {
 }
 
 
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-/*--- Fixed Background Image --*/
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0!important;
-}
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#fixed {
-  background-image: url('img/mac.png');
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
-}
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
     padding: 1rem;
